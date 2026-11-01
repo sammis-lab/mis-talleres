@@ -386,6 +386,18 @@ input {
     padding-left: 1rem;
   }
 
+  .editorial-search {
+    width: 100%;
+    max-width: none;
+    flex: 0 0 auto;
+  }
+
+  .editorial-search .input-group-text,
+  .editorial-search .form-control,
+  .editorial-search .btn {
+    min-height: 2.75rem;
+  }
+
   .editorial-list .list-group-item {
     padding-right: 0.8rem;
     padding-left: 0.8rem;
