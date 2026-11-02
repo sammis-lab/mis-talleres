@@ -1,1 +1,64 @@
+<header class="system-app-header">
+  <div class="system-app-header-inner">
+    <a class="system-app-brand" routerLink="/" aria-label="Mis Talleres, ir a talleres">
+      <span class="editorial-mark d-flex align-items-center justify-content-center" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <path fill="currentColor" d="M7 5 25 13c4-2 10-2 14 0l18-8-4 23c-2 13-10 22-21 29-11-7-19-16-21-29L7 5Z" />
+        </svg>
+      </span>
+      <span>
+        <span class="system-app-name">MIS TALLERES</span>
+        <span class="editorial-kicker d-block">Directorio local / 01</span>
+      </span>
+    </a>
+
+    <div class="system-launcher" (keydown.escape)="closeMenu()">
+      <button
+        type="button"
+        class="system-launcher-button"
+        [attr.aria-label]="menuOpen ? 'Cerrar menú de aplicaciones' : 'Abrir menú de aplicaciones'"
+        aria-controls="system-launcher-menu"
+        [attr.aria-expanded]="menuOpen"
+        (click)="toggleMenu()"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5" />
+          <rect x="14" y="3" width="7" height="7" rx="1.5" />
+          <rect x="3" y="14" width="7" height="7" rx="1.5" />
+          <rect x="14" y="14" width="7" height="7" rx="1.5" />
+        </svg>
+      </button>
+
+      <nav *ngIf="menuOpen" id="system-launcher-menu" class="system-launcher-menu" aria-label="Menú principal">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          <span class="system-launcher-item-icon" aria-hidden="true">T</span>
+          <span>
+            <span class="system-launcher-item-title">Talleres</span>
+            <span class="system-launcher-item-description">Directorio y gestión</span>
+          </span>
+        </a>
+        <a routerLink="/perfil" routerLinkActive="active" (click)="closeMenu()">
+          <span class="system-launcher-item-icon" aria-hidden="true">P</span>
+          <span>
+            <span class="system-launcher-item-title">Perfil</span>
+            <span class="system-launcher-item-description">Información de usuario</span>
+          </span>
+        </a>
+        <a routerLink="/configuracion" routerLinkActive="active" (click)="closeMenu()">
+          <span class="system-launcher-item-icon" aria-hidden="true">C</span>
+          <span>
+            <span class="system-launcher-item-title">Configuración</span>
+            <span class="system-launcher-item-description">Preferencias de la aplicación</span>
+          </span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
 <router-outlet></router-outlet>

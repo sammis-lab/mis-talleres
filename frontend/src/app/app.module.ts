@@ -8,9 +8,26 @@ import { AppComponent } from './app.component';
 import { TallerListComponent } from './components/taller-list/taller-list.component';
 import { TallerFormComponent } from './components/taller-form/taller-form.component';
 import { TallerItemComponent } from './components/taller-item/taller-item.component';
+import { AccountPageComponent } from './components/account-page/account-page.component';
 
 const routes: Routes = [
   { path: '', component: TallerListComponent },
+  {
+    path: 'perfil',
+    component: AccountPageComponent,
+    data: {
+      title: 'Perfil',
+      description: 'La información de perfil estará disponible cuando se habiliten las cuentas de usuario.'
+    }
+  },
+  {
+    path: 'configuracion',
+    component: AccountPageComponent,
+    data: {
+      title: 'Configuración',
+      description: 'Las preferencias de la aplicación estarán disponibles en una próxima actualización.'
+    }
+  },
   { path: 'create', component: TallerFormComponent },
   { path: 'edit/:id', component: TallerFormComponent },
   { path: '**', redirectTo: '' }
@@ -21,7 +38,8 @@ const routes: Routes = [
     AppComponent,
     TallerListComponent,
     TallerFormComponent,
-    TallerItemComponent
+    TallerItemComponent,
+    AccountPageComponent
   ],
   imports: [
     BrowserModule,

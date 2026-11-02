@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mis Talleres';
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
 }
