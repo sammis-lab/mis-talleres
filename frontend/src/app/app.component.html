@@ -1,6 +1,6 @@
-<header class="system-app-header">
+<header *ngIf="!isPortalPage" class="system-app-header">
   <div class="system-app-header-inner">
-    <a class="system-app-brand" routerLink="/" aria-label="Mis Talleres, ir a talleres">
+    <a class="system-app-brand" routerLink="/talleres" aria-label="Mis Talleres, ir a talleres">
       <span class="editorial-mark d-flex align-items-center justify-content-center" aria-hidden="true">
         <svg viewBox="0 0 64 64">
           <path fill="currentColor" d="M7 5 25 13c4-2 10-2 14 0l18-8-4 23c-2 13-10 22-21 29-11-7-19-16-21-29L7 5Z" />
@@ -31,7 +31,7 @@
 
       <nav *ngIf="menuOpen" id="system-launcher-menu" class="system-launcher-menu" aria-label="Menú principal">
         <a
-          routerLink="/"
+          routerLink="/talleres"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           (click)="closeMenu()"

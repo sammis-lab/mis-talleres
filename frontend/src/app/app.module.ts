@@ -9,9 +9,11 @@ import { TallerListComponent } from './components/taller-list/taller-list.compon
 import { TallerFormComponent } from './components/taller-form/taller-form.component';
 import { TallerItemComponent } from './components/taller-item/taller-item.component';
 import { AccountPageComponent } from './components/account-page/account-page.component';
+import { PortalPageComponent } from './components/portal-page/portal-page.component';
 
 const routes: Routes = [
-  { path: '', component: TallerListComponent },
+  { path: '', component: PortalPageComponent },
+  { path: 'talleres', component: TallerListComponent },
   {
     path: 'perfil',
     component: AccountPageComponent,
@@ -39,7 +41,8 @@ const routes: Routes = [
     TallerListComponent,
     TallerFormComponent,
     TallerItemComponent,
-    AccountPageComponent
+    AccountPageComponent,
+    PortalPageComponent
   ],
   imports: [
     BrowserModule,

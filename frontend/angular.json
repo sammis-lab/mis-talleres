@@ -26,7 +26,8 @@
             ],
             "styles": [
               "node_modules/bootswatch/dist/pulse/bootstrap.min.css",
-              "src/app-theme.css"
+              "src/app-theme.css",
+              "src/app/components/portal-page/portal-page.component.css"
             ],
             "scripts": []
           },
@@ -89,7 +90,8 @@
             ],
             "styles": [
               "node_modules/bootswatch/dist/pulse/bootstrap.min.css",
-              "src/app-theme.css"
+              "src/app-theme.css",
+              "src/app/components/portal-page/portal-page.component.css"
             ],
             "scripts": []
           }

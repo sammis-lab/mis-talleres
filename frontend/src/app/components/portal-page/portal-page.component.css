@@ -1,0 +1,344 @@
+.portal-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: #fff;
+}
+
+.portal-brand-panel {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3rem;
+  background: linear-gradient(145deg, #6254e8 0%, #5144d1 62%, #4337be 100%);
+  color: #fff;
+}
+
+.portal-brand-panel::before,
+.portal-brand-panel::after {
+  position: absolute;
+  width: min(68vw, 54rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.portal-brand-panel::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portal-brand-panel::after {
+  width: min(48vw, 39rem);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translate(-50%, -50%);
+}
+
+.portal-brand-glow {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.portal-brand-glow-one {
+  top: -12rem;
+  left: -9rem;
+  background: radial-gradient(circle, rgba(33, 200, 195, 0.26), transparent 70%);
+}
+
+.portal-brand-glow-two {
+  right: -12rem;
+  bottom: -13rem;
+  background: radial-gradient(circle, rgba(170, 161, 255, 0.32), transparent 70%);
+}
+
+.portal-brand-lockup {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.portal-brand-mark {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 15px 40px rgba(34, 26, 119, 0.2), inset 0 1px rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.portal-brand-mark svg {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.portal-brand-overline {
+  margin-bottom: 0.35rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  font-weight: 550;
+  letter-spacing: 0.01em;
+}
+
+.portal-brand-lockup h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+  font-weight: 760;
+  letter-spacing: -0.075em;
+  line-height: 1.04;
+}
+
+.portal-brand-name {
+  margin-top: 0.7rem;
+  color: #fff;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 750;
+  letter-spacing: 0.22em;
+}
+
+.portal-brand-caption {
+  margin-top: 0.85rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.95rem;
+}
+
+.portal-brand-index {
+  position: absolute;
+  bottom: 2rem;
+  left: 2.5rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+}
+
+.portal-brand-index span {
+  padding: 0 0.3rem;
+  color: var(--ai-cyan);
+}
+
+.portal-access-panel {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 7vw, 7rem);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(119, 108, 255, 0.06), transparent 28rem),
+    #fff;
+}
+
+.portal-access-content {
+  width: min(100%, 29rem);
+  margin: 0 auto;
+}
+
+.portal-access-kicker {
+  color: #252d46;
+  font-size: clamp(1.4rem, 2.7vw, 2.2rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+
+.portal-access-content h2 {
+  margin: 0.05rem 0 0;
+  color: #252d46;
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 760;
+  letter-spacing: -0.07em;
+  line-height: 1.12;
+}
+
+.portal-access-content h2 span {
+  color: var(--ai-violet);
+}
+
+.portal-access-description {
+  max-width: 25rem;
+  margin: 1.25rem 0 2.5rem;
+  color: #7a8499;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.portal-enter-button {
+  min-height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  border: 0;
+  border-radius: 0.8rem;
+  background: linear-gradient(100deg, #6254e8, #7164ed);
+  box-shadow: 0 9px 22px rgba(98, 84, 232, 0.22);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+
+.portal-enter-button:hover,
+.portal-enter-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 28px rgba(98, 84, 232, 0.3);
+  color: #fff;
+}
+
+.portal-enter-button:focus-visible {
+  outline: 3px solid rgba(98, 84, 232, 0.35);
+  outline-offset: 3px;
+}
+
+.portal-enter-button svg {
+  width: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.portal-access-note {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+  color: #748097;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.portal-access-note-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 0.7rem;
+  background: #f0efff;
+  color: var(--ai-violet);
+}
+
+.portal-access-note-icon svg {
+  width: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.portal-footer {
+  position: absolute;
+  right: clamp(2rem, 7vw, 7rem);
+  bottom: 1.75rem;
+  left: calc(50% + clamp(2rem, 7vw, 7rem));
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eceef4;
+  color: #98a0b0;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 760px) {
+  .portal-page {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-brand-panel {
+    min-height: 15rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .portal-brand-mark {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+
+  .portal-brand-mark svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .portal-brand-overline {
+    font-size: 0.95rem;
+  }
+
+  .portal-brand-lockup h1 {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .portal-brand-name {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  .portal-brand-caption {
+    margin-top: 0.4rem;
+    font-size: 0.82rem;
+  }
+
+  .portal-brand-index {
+    bottom: 0.8rem;
+    left: 1rem;
+    font-size: 0.58rem;
+  }
+
+  .portal-access-panel {
+    min-height: 24rem;
+    padding: 3rem clamp(1.5rem, 8vw, 3.5rem) 5rem;
+  }
+
+  .portal-access-content {
+    width: min(100%, 32rem);
+  }
+
+  .portal-access-description {
+    margin-bottom: 1.75rem;
+  }
+
+  .portal-footer {
+    right: clamp(1.5rem, 8vw, 3.5rem);
+    bottom: 1.25rem;
+    left: clamp(1.5rem, 8vw, 3.5rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .portal-brand-panel {
+    min-height: 13.5rem;
+  }
+
+  .portal-access-kicker {
+    font-size: 1.3rem;
+  }
+
+  .portal-access-content h2 {
+    font-size: 2.7rem;
+  }
+
+  .portal-footer {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}

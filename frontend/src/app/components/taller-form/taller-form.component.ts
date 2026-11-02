@@ -61,7 +61,7 @@ export class TallerFormComponent implements OnInit {
     if (this.isEditMode && this.tallerId) {
       this.tallerService.update(this.tallerId, taller).subscribe({
         next: () => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/talleres']);
         },
         error: (error) => {
           console.error('Error al actualizar taller:', error);
@@ -70,7 +70,7 @@ export class TallerFormComponent implements OnInit {
     } else {
       this.tallerService.create(taller).subscribe({
         next: () => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/talleres']);
         },
         error: (error) => {
           console.error('Error al crear taller:', error);
@@ -80,7 +80,7 @@ export class TallerFormComponent implements OnInit {
   }
 
   onCancel(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/talleres']);
   }
 
   get f() {
